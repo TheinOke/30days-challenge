@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home workout app</title>
+  </head>
+  <link rel="stylesheet" href="../css2/app1.css" />
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><i class="fa-solid fa-dumbbell text-dark me-2"> </i> <span class="d-lg-inline-block d-none d-md-inline-block">Home workout</span> </i>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item me-4">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item me-4">
+                <a class="nav-link" href="#">About</a>
+              </li>
+
+            
+
+              <li class="nav-item me-4 dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  More Apps
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+
+            <li class="nav-item me-4">
+                <a class="nav-link" href="#"> Privacy & Policy</a>
+              </li>
+             
+              <li class="nav-item me-4">
+                <a class="nav-link" href="#">contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="main container-fluid">
+        <div class="row">
+          <div class="col-lg-7 main_col_1 col-xl-6 col-md-7 col-sm-12 d-flex justify-content-center">
+            <div class="phone-container">
+              <div class="phone_screen">
+                <div
+                  class="phone_nav bg-primary d-flex justify-content-between align-items-center"
+                >
+                  <h2 class="text-white">
+                    <i class="fa-solid fa-dumbbell"></i>
+                  </h2>
+                  <i class="fa-solid fa-bars text-white"></i>
+                </div>
+                <div class="row mainphrow">
+                  <div class="col-12">
+                    <h2 class="text-capitalize phone-h2 me-2">
+                      your activities this week
+                    </h2>
+
+                    <canvas id="myChart" class="animations"></canvas>
+                  </div>
+                  <div class="col-12 phone-row">
+                    <div class="row d-flex flex-row justify-content-center">
+                      <div class="col-12 phone_columns">
+                        <div
+                          class="nav_phone_column d-flex mt-2 align-items-center justify-content-between"
+                        >
+                          <p class="workout_txt">upper body workout</p>
+                          <i class="fa-solid fa-star ms-auto text-white"></i>
+                        </div>
+                      </div>
+                      <div class="col-12 phone_columns">
+                        <div
+                          class="nav_phone_column d-flex mt-2 align-items-center justify-content-between"
+                        >
+                          <p class="workout_txt">diet plan</p>
+                          <i class="fa-solid fa-star ms-auto text-white"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-5 main_col_2 col-lg-5 col-md-5 col-sm-12">
+            <h1 class="hero_title animations">
+              <span class="hero_title_span"></span>
+            </h1>
+            <p class="hero_content">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
+              harum porro non eum reiciendis fugiat, tempora sunt veniam quos
+              odio.
+            </p>
+            <div class="row">
+              <div class="col-lg-6 col-md-12 col-12">
+                <a
+                  href=""
+                  class="btn btn-primary w-100 rounded rounded-pill my-2 pc_download fw-bold"
+                  >Download For Window/MAC/etc.</a
+                >
+              </div>
+              <div class="col-lg-6 col-md-12 col-12">
+                <a
+                  href=""
+                  class="btn btn-outline-dark w-100 rounded rounded-pill my-2 pc_download fw-bold"
+                  >Download on your mobile phone</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../node_modules/typed.js/lib/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../node_modules/wow.js/dist/wow.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart").getContext("2d");
+
+      let type = new Typed(".hero_title_span", {
+        strings: ["No need to go Gym anymore!"],
+        typeSpeed: 50,
+        startDelay: 500,
+      });
+
+      //   import Typed from "typed.js";
+
+      //   var options = {
+      //     strings: ["No need to go Gym anymore!"],
+      //     typeSpeed: 30,
+      //   };
+
+      //   var typed = new Typed(".hero_title_span", options);
+
+      const myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          datasets: [
+            {
+              label: "# of Votes",
+              data: [12, 19, 3, 5, 2, 3],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+            },
+          ],
+        },
+        options: {
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+        responsive: true,
+      });
+
+      var wow = new WOW({
+        boxClass: "wow", // animated element css class (default is wow)
+        animateClass: "animations", // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+      });
+      wow.init();
+    </script>
+  </body>
+</html>

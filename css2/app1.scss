@@ -1,0 +1,131 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/animate.css/animate.min.css";
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Raleway:wght@300;400;500;600&display=swap");
+
+:root {
+  --normal-text: calc((14px + (18 - 14) * ((100vw - 300px) / (1600 - 300))));
+  --heading-phone-font-size: calc(
+    20px + (25 - 20) * ((1400px - 300px) / (1600 - 300))
+  );
+  --text-phone-font-size: calc(
+    14px + (17 - 14) * ((100vw - 300px) / (1600 - 300))
+  );
+}
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+p,
+a {
+  font-family: "Raleway", sans-serif;
+  font-size: var(--normal-text);
+}
+
+.phone-h2 {
+  font-size: var(--heading-phone-font-size);
+}
+
+.navbar-brand {
+  //   font-size: calc((20px + (25 - 20) * ((100vw - 300px) / (1600 - 300))));
+  font-size: var(--heading-phone-font-size);
+  font-weight: 500;
+}
+
+.hero_title {
+  font-size: calc((30px + (45 - 30) * ((100vw - 300px) / (1600 - 300))));
+  margin-bottom: calc(45px / 1.4);
+  line-height: calc(45px * 1.4);
+  min-height: 130px;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+
+.pc_download {
+  line-height: calc(18px * 1.4);
+}
+
+.hero_content {
+  font-size: var(--normal-text);
+  line-height: calc(18px * 1.8);
+  letter-spacing: 0.12rem;
+  margin-bottom: calc(18px * 1.618);
+}
+
+.active {
+  text-decoration: underline 2px black;
+}
+
+.main_col_1,
+.main_col_2 {
+  margin-top: 20px;
+}
+
+.phone-container {
+  padding: 5px;
+  border-radius: 20px;
+  width: fit-content;
+  background: #121212;
+}
+.phone_screen {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #ffff;
+  overflow: hidden;
+}
+.phone_nav {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 2.5px 10px;
+}
+.phone-row {
+  padding: 0px 25px;
+  margin-top: 10px;
+}
+
+.mainphrow {
+  padding: 0px 10px;
+}
+
+.nav_phone_column > p {
+  margin-bottom: 0px;
+  color: white;
+}
+
+.workout_txt {
+  font-size: calc(17px + (22 - 17) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.phone_columns {
+  height: 80px;
+  margin-top: 5px;
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(4px) saturate(180%);
+  background-color: #0d6efd;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.fa-bars {
+  font-size: var(--heading-phone-font-size);
+}
+
+@include media-breakpoint-down(sm) {
+  .phone_screen {
+    width: 260px;
+    height: 500px;
+  }
+  .hero_title {
+    min-height: 150px;
+    line-height: calc(
+      (30px + (45 - 30) * ((100vw - 300px) / (1600 - 300))) * 1.4
+    );
+  }
+}

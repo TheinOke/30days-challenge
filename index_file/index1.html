@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="../css/app.css" />
+
+  <body>
+    <div class="container">
+      <div class="main">
+        <nav
+          class="navbar py-3 navbar-expand-lg navbar-dark bg-dark bg-opacity-75"
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand ms-4" href="#">Cafetaria</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item me-4">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item me-4">
+                  <a class="nav-link" href="#">about</a>
+                </li>
+                <li class="nav-item me-4 dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    categories
+                  </a>
+                  <ul
+                    class="dropdown-menu dropdown-menu-dark"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item me-4">
+                  <a class="nav-link" href="#">contact us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="main_content">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="content">
+                <h2>Order Your Coffee online from Cafetaria</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eveniet quaerat esse nostrum? Incidunt molestiae iusto
+                  architecto sequi optio itaque rem, distinctio quaerat quod
+                  rerum. Id explicabo dolores adipisci error quia.
+                </p>
+                <form class="d-flex">
+                  <input
+                    class="form-control h-50 me-2 w-50"
+                    type="search"
+                    placeholder="enter your place..."
+                    aria-label="Search"
+                  />
+                  <a href="#" target="_blank" class="btn btn-success"
+                    >order now
+                  </a>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-7"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 
+A sports mobile app that enables users to track their fitness, schedule training sessions, and sync with their coaches.
+ -->
+
+    <!---------------------------------------------------------------------->
+    <script src="../node_modules/wow.js/src/WOW.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      var wow = new WOW({
+        boxClass: "wow", // animated element css class (default is wow)
+        animateClass: "animate__animated", // animation css class (default is animated)
+        offset: 0, // distance to the element when triggering the animation (default is 0)
+        mobile: true, // trigger animations on mobile devices (default is true)
+        live: true, // act on asynchronously loaded content (default is true)
+        callback: function (box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null, // optional scroll container selector, otherwise use window,
+        resetAnimation: true, // reset animation on end (default is true)
+      });
+      wow.init();
+    </script>
+  </body>
+</html>
