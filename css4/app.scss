@@ -1,0 +1,193 @@
+$navbar-dark-color: rgba(255, 255, 255, 0.7);
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/animate.css/animate.min.css";
+
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Montserrat:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+
+:root {
+  --font-size: calc((16px + (18 - 16) * ((100vw - 300px) / (1600 - 300))));
+  --montserrat: "Montserrat", sans-serif;
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --number: "Inconsolata", monospace;
+}
+
+.navbar {
+  backdrop-filter: blur(11px) saturate(180%);
+  -webkit-backdrop-filter: blur(11px) saturate(180%);
+  //   background-color: rgba(255, 255, 255, 0.253);
+  //   border-radius: 12px;
+  //   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.nav-link,
+.dropdown-item {
+  color: #ffffff;
+  font-size: var(--font-size);
+  font-family: var(--montserrat);
+  letter-spacing: 0.26rem;
+}
+.dropdown-item {
+  letter-spacing: 0.2rem;
+}
+
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover {
+  color: #ffffffd0;
+}
+
+.navbar-brand {
+  color: black;
+  font-size: calc((20px + (30 - 20) * ((100vw - 300px) / (1600 - 300))));
+  font-family: var(--montserrat);
+  letter-spacing: 0.4rem;
+  font-weight: 600;
+  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+.navbar-brand:hover,
+.navbar-brand:active,
+.navbar-brand:focus {
+  color: black;
+  text-shadow: -1px -1px 0 #ffffffc4, 1px -1px 0 #ffffffc4, -1px 1px 0 #ffffffc4,
+    1px 1px 0 #ffffffc4;
+}
+
+// navbar
+
+.image-container {
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.shade {
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  background-color: rgba(255, 255, 255, 0.226);
+  filter: blur(35px) brightness(40%);
+  border-radius: 50%;
+  bottom: -50%;
+  z-index: 2;
+  //   left: -30%;
+
+  // border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+.logo {
+  color: rgb(0, 0, 0);
+}
+
+.credit-cotainer {
+  backdrop-filter: blur(18px) saturate(200%);
+  -webkit-backdrop-filter: blur(18px) saturate(200%);
+  border-radius: 12px;
+  border: 2px solid rgba(209, 213, 219, 0.3);
+  padding: 15px;
+  width: 100%;
+  transform: rotateX(-55deg) rotate(-20deg) skewX(35deg);
+}
+
+.c-1 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgb(145, 0, 0);
+}
+
+.c-2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(150, 150, 0, 0.822);
+  margin-left: -20px;
+}
+
+.credit-cotainer-one {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 5;
+}
+
+.credit-cotainer-three {
+  background-color: rgba(0, 63, 136, 0.705);
+  position: absolute;
+  margin-top: 220px;
+  z-index: 3;
+}
+
+.credit-cotainer-two {
+  background-color: rgba(131, 0, 0, 0.705);
+  position: absolute;
+  margin-top: 120px;
+  z-index: 4;
+}
+
+.number,
+.date {
+  font-size: calc((16px + (17 - 15) * ((100vw - 300px) / (1600 - 300))));
+  font-family: "Inconsolata", monospace;
+}
+
+// --------------------------content-------------------------------------
+
+.h2 {
+  font-family: var(--montserrat);
+  font-size: calc((30px + (45 - 30) * ((100vw - 300px) / (1600 - 300))));
+  font-weight: 600;
+  text-shadow: -2px -2px 0 #ffffff, 2px -2px 0 #ffffff, -2px 2px 0 #ffffff,
+    2px 2px 0 #ffffff;
+  letter-spacing: 0.4rem;
+  margin-top: 60px;
+  margin-bottom: calc(60px / 1.618);
+}
+
+.content-text {
+  font-family: var(--source-sans-pro);
+  font-size: var(--font-size);
+  letter-spacing: 0.15rem;
+  line-height: calc(var(--font-size) * 1.8);
+  word-spacing: 0.3rem;
+}
+/* backdrop-filter: blur(15px) saturate(200%);
+-webkit-backdrop-filter: blur(15px) saturate(200%);
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 12px;
+border: 1px solid rgba(209, 213, 219, 0.3);*/
+
+@include media-breakpoint-down(sm) {
+  .credit-cotainer {
+    transform: rotateX(-50deg) rotate(-30deg) skewX(10deg);
+    padding: 6px;
+    width: 70%;
+  }
+
+  .c-1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgb(145, 0, 0);
+  }
+
+  .c-2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(150, 150, 0, 0.822);
+    margin-left: -20px;
+  }
+
+  .image-container {
+    height: 400px;
+  }
+  .shade {
+    bottom: -60%;
+  }
+}

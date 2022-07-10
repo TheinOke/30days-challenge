@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&family=Raleway:wght@300;400;500;600&display=swap");
 
 :root {
-  --font-size: calc((15px + (18 - 15) * ((100vw - 300px) / (1600 - 300))));
+  --font-size: calc((16px + (19 - 16) * ((100vw - 300px) / (1600 - 300))));
   --font-family-1: "Raleway", sans-serif;
   --font-family-2: "Open Sans", sans-serif;
 }
@@ -26,7 +26,7 @@
 }
 
 .hero-title {
-  font-size: calc((25px + (45 - 25) * ((100vw - 300px) / (1600 - 300))));
+  font-size: calc((30px + (45 - 30) * ((100vw - 300px) / (1600 - 300))));
   font-family: "Raleway", sans-serif;
   text-transform: capitalize;
   line-height: calc(45px * 1.4);
@@ -42,10 +42,11 @@
   text-align: start;
   // text-indent: 3.5rem;
   letter-spacing: 0.08rem;
-  word-spacing: 0.128rem;
-  line-height: calc(var(--font-size) * 1.8);
+  word-spacing: 0.15rem;
+  word-wrap: normal;
+  line-height: calc(var(--font-size) * 2);
   font-family: var(--font-family-2);
-  margin-bottom: 56px;
+  margin-bottom: 35px;
 }
 
 .btn {
@@ -122,6 +123,6 @@
   }
 
   .main-text {
-    text-indent: 2.5rem;
+    text-indent: 4rem;
   }
 }
